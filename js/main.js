@@ -3,8 +3,6 @@ const bottomsPlay = document.querySelectorAll('.button-play__wrap');
 const closeModal = document.querySelector('.close');
 const closeStopVideo = document.querySelector('iframe');
 
-console.log(closeStopVideo);
-
 bottomsPlay.forEach((item, i) => {
   item.addEventListener('click', () => {
     modal.classList.add('active');
