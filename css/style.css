@@ -5,7 +5,7 @@
     "aside main main"
     "aside main main";
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-  gap: 8rem 0;
+  gap: 3rem 0;
 }
 
 .grid-init {
@@ -16,6 +16,9 @@
 
 .header {
   grid-area: header;
+  box-shadow: 0px .4rem 1rem rgba(255, 255, 255, 0.07);
+  padding: 3rem 7rem 2rem 7rem;
+  margin: -3rem -7rem 0 -7rem;
 }
 
 .aside {
@@ -99,6 +102,11 @@
 }
 
 /*/////////main////////////*/
+
+.main-display {
+  padding-top: 5rem;
+}
+
 .main-display__trailer {
   display: flex;
   flex-direction: column;
@@ -208,6 +216,7 @@
   font-size: 2rem;
   line-height: 115%;
   color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
 }
 
 .title-right img {
@@ -360,13 +369,42 @@ height: 1.6rem;
 /*///////////asside////////*/
 .aside {
   padding-right: 5.9rem;
+  position: relative;
+}
+
+.aside::after {
+  position: absolute;
+  content: url('../image/triangle.svg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.2rem;
+  height: 2.6rem;
+  background: #fff;
+  border-radius: 2rem;
+  top: 10rem;
+  right: 4.8rem;
+  cursor: pointer;
+}
+
+.asside__wrap {
+  background: rgba(255, 255, 255, 0.02);
+  margin-left: -2.4rem;
+}
+
+.asside__top {
+  padding-top: 5rem;
+  padding-right: 2.3rem;
+  padding-left: 2.4rem;
+  padding-bottom: 4rem;
+  background: #17161B;
+  border-right: .1rem solid #1C1B1F;
 }
 
 .asside__title {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
 
 .asside__header {
@@ -427,9 +465,9 @@ height: 1.6rem;
   margin-top: 3rem;
 }
 
-.asside__item:nth-child(3) {
+/* .asside__item:nth-child(3) {
   margin-bottom: 4rem;
-}
+} */
 
 .asside__views {
   position: relative;
@@ -457,8 +495,29 @@ height: 1.6rem;
 }
 
 .asside__bottom {
-  padding: 2.5rem 2rem;
-  background: rgba(255, 255, 255, 0.02);
+  /* padding: 2.5rem 2rem; */
+  padding: 2.5rem 0 2rem 2.4rem;
+}
+
+.asside__footer {
+  position: relative;
+  z-index: 10;
+}
+
+.asside__footer-bottom {
+  position: relative;
+}
+
+.asside__footer-bottom::before {
+  position: absolute;
+  top: -50%;
+  left: 0;
+  transform: translate(0, -50%);
+  content: '';
+  display: block;
+  width: 6.5rem;
+  height: 0.1rem;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .asside__favorit-text {
