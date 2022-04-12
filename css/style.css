@@ -16,7 +16,8 @@
 
 .header {
   grid-area: header;
-  box-shadow: 0px .4rem 1rem rgba(255, 255, 255, 0.07);
+  /* box-shadow: 0px .4rem 1rem rgba(255, 255, 255, 0.07); */
+  box-shadow: 0 0.6rem 0.4rem -0.3rem rgba(255, 255, 255, 0.07);
   padding: 2rem 0;
   margin-right: -2rem;
   /* padding: 3rem 7rem 2rem 7rem;
@@ -52,6 +53,16 @@
   font-weight: 500;
   font-size: 2.4rem;
   line-height: 116%;
+  transition: all 1s ease-in-out;
+}
+
+.header__nav a:hover,
+.header__nav a:focus {
+  color: red;
+}
+
+.header__active {
+  text-decoration: underline;
 }
 
 .header__nav a:not(:last-child) {
@@ -122,6 +133,19 @@
   background-size: cover;
   background-position: center;
   padding: 1.9rem;
+  transition: all 1s ease-in-out;
+}
+
+.main-display__trailer:hover,
+.main-display__trailer:focus,
+.trending__item:hover,
+.trending__item:focus,
+.popular__item:hover,
+.popular__item:focus,
+.asside__item:hover,
+.asside__item:focus {
+  box-shadow: 0 0 40px rgba(0, 0, 0, .8) inset;
+
 }
 
 .main-display__trailer::before,
@@ -179,6 +203,11 @@
   cursor: pointer;
 }
 
+.button-play__wrap:focus,
+.button-play__wrap:hover {
+  box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.2) inset;
+}
+
 .button-play {
   width: 0;
   height: 0;
@@ -219,6 +248,12 @@
   line-height: 115%;
   color: rgba(255, 255, 255, 0.2);
   cursor: pointer;
+  transition: all 0.5s ease-in-out
+}
+
+.title-right span:hover,
+.title-right span:focus {
+  text-shadow: 0.1rem 0 1.1rem rgb(195, 152, 152);
 }
 
 .title-right img {
@@ -242,6 +277,7 @@
   background: url('../image/trayding.jpg') no-repeat;
   background-size: cover;
   border-radius: 1.6rem;
+  transition: all 1s ease-in-out;
 }
 
 .trending__plash {
@@ -322,6 +358,7 @@ height: 1.6rem;
   background: url('../image/popular.jpg') no-repeat;
   background-size: cover;
   border-radius: 1.6rem;
+  transition: all 1s ease-in-out;
 }
 
 .popular__footer {
@@ -465,6 +502,7 @@ height: 1.6rem;
   background-position: center;
   padding: 1.9rem;
   margin-top: 3rem;
+  transition: all 1s ease-in-out;
 }
 
 /* .asside__item:nth-child(3) {
@@ -537,9 +575,18 @@ height: 1.6rem;
 
 .aside__genre {
   padding: .5rem 1rem .6rem 1rem;
-  border-radius: 30px;
-  font-size: 12px;
-  line-height: 14px;
+  border-radius: 3rem;
+  font-size: 1.2rem;
+  line-height: 116%;
+  transition: all 0.3s ease-in-out;
+}
+
+.aside__genre:hover,
+.aside__genre:focus,
+.asside__add-round:hover,
+.asside__add-round:focus {
+  cursor: pointer;
+  box-shadow: 0 0.3rem 0.3rem rgba(255, 255, 255, 0.4);
 }
 
 .perple {
